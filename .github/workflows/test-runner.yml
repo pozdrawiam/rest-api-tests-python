@@ -1,7 +1,7 @@
 name: Python test
 on: 
   schedule:
-    - cron: '50 * * * *'
+    - cron: '53 * * * *'
   push:
 
 jobs:
