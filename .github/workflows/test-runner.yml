@@ -1,5 +1,8 @@
 name: Python test
-on: push
+on: 
+  schedule:
+    - cron: '50 * * * *'
+  push
 
 jobs:
   Run-Tests:
