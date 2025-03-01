@@ -1,12 +1,12 @@
-name: Python test
-on: 
-  push:
+name: Python test ${{ github.event.inputs.python_version }}
+on:
   workflow_dispatch:
-    input:
+    inputs:
       python_version:
         description: 'Python version'
         required: true
         default: '3.13.2'
+  push:
 
 jobs:
   Run-Tests:
