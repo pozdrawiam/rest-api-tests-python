@@ -2,7 +2,7 @@ name: Python test
 on: 
   schedule:
     - cron: '50 * * * *'
-  push
+  push:
 
 jobs:
   Run-Tests:
