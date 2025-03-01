@@ -1,4 +1,4 @@
-name: Python test ${{ github.event.inputs.python_version }}
+name: Python test
 on:
   workflow_dispatch:
     inputs:
