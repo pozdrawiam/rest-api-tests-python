@@ -1,8 +1,12 @@
 name: Python test
 on: 
-  schedule:
-    - cron: '55 * * * *'
   push:
+  workflow_dispatch:
+    input:
+      python_version:
+        description: 'Python version'
+        required: true
+        default: '3.13.2'
 
 jobs:
   Run-Tests:
@@ -14,7 +18,7 @@ jobs:
       - name: Set up Python 3
         uses: actions/setup-python@v3
         with:
-          python-version: '3.13.2'
+          python-version: '{{ github.event.inputs.python_version }}'
 
       - name: Install dependencies and Run tests
         run: |
